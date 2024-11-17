@@ -62,6 +62,7 @@ namespace bip12.EnterPages
             {
                 try 
                 { 
+                    _user.Password = PasswordBox.Password;
                     await _userService.AddUserAsync(_user);
                     MessageBox.Show("Вы успешно зарегестрированы!", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
                     MainBip12 mainBip12 = new();

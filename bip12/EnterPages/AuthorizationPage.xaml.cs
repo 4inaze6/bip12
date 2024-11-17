@@ -1,4 +1,5 @@
-﻿using bip12.Services;
+﻿using bip12.Models;
+using bip12.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,20 +35,26 @@ namespace bip12.EnterPages
 
         private async void EnterButton_Click(object sender, RoutedEventArgs e)
         {
-            var users = await _userService.GetUsersAsync();
-            foreach (var user in users)
+            User user = new();
+            var users = await _userService?.GetUsersAsync();
+            foreach (var item in users)
             {
-                if (user.Login == LoginTextBox.Text && user.Password == PasswordBox.Password)
+                if (item.Login == LoginTextBox.Text && item.Password == PasswordBox.Password)
                 {
-                    MainBip12 mainBip12 = new();
-                    MainWindow mainWindow = new();
-                    mainWindow.Hide();
-                    mainBip12.Show();
+                    user = await _userService.GetUserByIdAsync(item.UserId);
+
                 }
-                else
-                {
-                    MessageBox.Show("Неверно указан логин или пароль");
-                }
+            }
+            if (user != null)
+            {
+                MainBip12 mainBip12 = new MainBip12();
+                MainWindow mainWindow = new();
+                mainWindow.Hide();
+                mainBip12.Show();
+            }
+            else
+            {
+                MessageBox.Show("Введен неверный логин или пароль");
             }
         }
     }

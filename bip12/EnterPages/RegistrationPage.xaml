@@ -10,7 +10,7 @@
 
     <StackPanel>
         <Label Content="Логин:"/>
-        <TextBox x:Name="LoginTextBox" Width="500"/>
+        <TextBox x:Name="LoginTextBox" Width="500" Text="{Binding Login, Mode=TwoWay}"/>
         <Label Content="Пароль:"/>
         <PasswordBox x:Name="PasswordBox" Width="500"/>
         <Label Content="Подтверждение пароля:"/>

@@ -13,6 +13,13 @@ namespace bip12.Services
     {
         private readonly Bip12Context _context = new();
 
+        public async Task<User>? GetUserByIdAsync(int id)
+        {
+            return await _context.Users
+                .AsNoTracking()
+                .FirstOrDefaultAsync(f => f.UserId == id);
+        }
+
         public async Task<List<User>> GetUsersAsync()
         {
             return await _context.Users.ToListAsync();
