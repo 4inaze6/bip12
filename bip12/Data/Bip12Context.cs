@@ -26,9 +26,7 @@ public partial class Bip12Context : DbContext
     {
         modelBuilder.Entity<User>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("User");
+            entity.ToTable("User");
 
             entity.Property(e => e.Login)
                 .HasMaxLength(50)
@@ -36,7 +34,6 @@ public partial class Bip12Context : DbContext
             entity.Property(e => e.Password)
                 .HasMaxLength(50)
                 .IsUnicode(false);
-            entity.Property(e => e.UserId).ValueGeneratedOnAdd();
         });
 
         OnModelCreatingPartial(modelBuilder);
