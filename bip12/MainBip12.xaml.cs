@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bip12.MainBip12Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,9 @@ namespace bip12
         public MainBip12()
         {
             InitializeComponent();
+
+            ProfileLeftMenuPage profileLeftMenuPage = new(this);
+            LeftMenu.Navigate(profileLeftMenuPage);
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
@@ -31,7 +35,7 @@ namespace bip12
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new HelloPage());
         }
     }
 }

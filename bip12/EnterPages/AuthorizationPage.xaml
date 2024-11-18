@@ -15,7 +15,7 @@
         <PasswordBox x:Name="PasswordBox" Width="500" Margin="3"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button x:Name="BackButton" Content="&lt;===" FontSize="20" Height="30" Width="75" Margin="5" Click="BackButton_Click"/>
-            <Button x:Name="EnterButton" Content="Войти" Height="30" Width="150" Margin="5" Click="EnterButton_Click"/>
+            <Button x:Name="EnterButton" Content="Войти" Height="30" Width="150" Margin="5" Click="EnterButton_Click" IsDefault="True"/>
         </StackPanel>
     </StackPanel>
 </Page>
