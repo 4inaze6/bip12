@@ -34,6 +34,21 @@ namespace bip12.EnterPages
             DataContext = _user;
         }
 
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            var window = Window.GetWindow(this);
+
+            if (window != null)
+            {
+                var frame = window.FindName("EnterFrame") as Frame;
+
+                if (frame != null && frame.CanGoBack)
+                {
+                    frame.GoBack();
+                }
+            }
+        }
+
         private async void RegistrationButton_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new();
@@ -75,13 +90,6 @@ namespace bip12.EnterPages
                     MessageBox.Show(ex.InnerException.Message);
                 }
             }
-
-
-        }
-
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

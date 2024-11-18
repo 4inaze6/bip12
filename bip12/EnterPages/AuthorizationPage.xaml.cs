@@ -1,4 +1,5 @@
-﻿using bip12.Models;
+﻿using Azure;
+using bip12.Models;
 using bip12.Services;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,17 @@ namespace bip12.EnterPages
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
+            var window = Window.GetWindow(this);
+
+            if (window != null)
+            {
+                var frame = window.FindName("EnterFrame") as Frame;
+
+                if (frame != null && frame.CanGoBack)
+                {
+                    frame.GoBack();
+                }
+            }
         }
 
         private async void EnterButton_Click(object sender, RoutedEventArgs e)
