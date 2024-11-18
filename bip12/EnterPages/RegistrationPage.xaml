@@ -16,7 +16,7 @@
         <Label Content="Подтверждение пароля:"/>
         <PasswordBox x:Name="ConfirmationPasswordBox" Width="500"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button x:Name="BackButton" Content="&lt;===" FontSize="20" Height="30" Width="75" Margin="5"/>
+            <Button x:Name="BackButton" Content="&lt;===" FontSize="20" Height="30" Width="75" Margin="5" Click="BackButton_Click"/>
             <Button x:Name="RegistrationButton" HorizontalAlignment="Center" Height="30" Width="150" Content="Зарегистрироваться" Margin="5" Click="RegistrationButton_Click" IsDefault="True"/>
         </StackPanel>
     </StackPanel>

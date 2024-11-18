@@ -78,5 +78,10 @@ namespace bip12.EnterPages
 
 
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

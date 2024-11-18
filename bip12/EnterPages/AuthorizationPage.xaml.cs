@@ -30,7 +30,6 @@ namespace bip12.EnterPages
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-
         }
 
         private async void EnterButton_Click(object sender, RoutedEventArgs e)

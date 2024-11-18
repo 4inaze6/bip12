@@ -26,7 +26,6 @@ namespace bip12.MainBip12Pages
             InitializeComponent();
 
             _mainBip12 = mainBip12;
-            GoBackButton.IsEnabled = false;
         }
 
         private void AboutMeButton_Click(object sender, RoutedEventArgs e)
@@ -46,13 +45,8 @@ namespace bip12.MainBip12Pages
 
         private void GoBackButton_Click(object sender, RoutedEventArgs e)
         {
-            if (_mainBip12.MainFrame.Content is not HelloPage)
-            {
+            if(_mainBip12.MainFrame.CanGoBack)
                 _mainBip12.MainFrame.GoBack();
-                GoBackButton.IsEnabled = true;
-            }
-            else
-                GoBackButton.IsEnabled = false;
         }
     }
 }
