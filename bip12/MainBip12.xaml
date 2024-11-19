@@ -26,16 +26,16 @@
         </Button>
 
         <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2">
-            <Button Width="300">
+            <Button x:Name="ProfileButton" Width="300" Click="ProfileButton_Click">
                 <StackPanel Width="250" Orientation="Horizontal">
                     <Image Source="/profile.jpg" HorizontalAlignment="Left" Margin="3"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20" FontWeight="Bold">ПРОФИЛЬ</TextBlock>
                 </StackPanel>
             </Button>
-            <Button Width="300">
+            <Button x:Name="NewsButton" Width="300" Click="NewsButton_Click">
                 <StackPanel Width="250" Orientation="Horizontal">
                     <Image Source="/profile.jpg" HorizontalAlignment="Left" Margin="3"/>
-                    <TextBlock VerticalAlignment="Center" FontSize="20" FontWeight="Bold">ПРОФИЛЬ</TextBlock>
+                    <TextBlock VerticalAlignment="Center" FontSize="20" FontWeight="Bold">НОВОСТИ</TextBlock>
                 </StackPanel>
             </Button>
             <Button Width="300">

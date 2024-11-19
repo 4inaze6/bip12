@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ProfileLeftMenuPage">
 
-    <StackPanel Grid.Row="1">
+    <StackPanel>
         <Button x:Name="AboutMeButton" Height="110" Width="300" Content="О СЕБЕ" FontSize="30" Click="AboutMeButton_Click"/>
         <Button x:Name="MyBooksButton" Height="110" Width="300" Content="МОИ КНИГИ" FontSize="30" Click="MyBooksButton_Click"/>
         <Button x:Name="ReadingDiaryButton" Height="110" Width="300" Content="ДНЕВНИК ЧТЕНИЯ" FontSize="30" Click="ReadingDiaryButton_Click"/>

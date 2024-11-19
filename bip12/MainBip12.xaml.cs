@@ -1,4 +1,5 @@
 ﻿using bip12.MainBip12Pages;
+using bip12.NewsPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,12 +21,17 @@ namespace bip12
     /// </summary>
     public partial class MainBip12 : Window
     {
+        private ProfileLeftMenuPage profileLeftMenuPage;
+        private NewsMenuPage newsMenuPage;
+        private bool firstPage = true;
         public MainBip12()
         {
             InitializeComponent();
 
-            ProfileLeftMenuPage profileLeftMenuPage = new(this);
+            profileLeftMenuPage = new(this);
             LeftMenu.Navigate(profileLeftMenuPage);
+
+            newsMenuPage = new(this);
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
@@ -35,7 +41,20 @@ namespace bip12
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            firstPage = false;
             MainFrame.Navigate(new HelloPage());
+        }
+
+        private void ProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            LeftMenu.Navigate(profileLeftMenuPage);
+            if (!firstPage)
+                MainFrame.Navigate(new AboutMePage());
+        }
+
+        private void NewsButton_Click(object sender, RoutedEventArgs e)
+        {
+            LeftMenu.Navigate(newsMenuPage);
         }
     }
 }
