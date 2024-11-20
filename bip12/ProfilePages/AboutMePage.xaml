@@ -5,10 +5,93 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:bip12.MainBip12Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="864" d:DesignWidth="1620"
       Title="AboutMePage">
 
     <Grid>
-        <Label Content="About ME" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Image Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Source="/ProfilePages/profile.jpg"/>
+        <StackPanel Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="4" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Имя:" FontSize="35"/>
+                <Label Content="неизвестно" FontSize="35"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Дата рождения:" FontSize="35"/>
+                <Label Content="неизвестно" FontSize="35"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="4" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Город:" FontSize="35"/>
+                <Label Content="Неизвестно" FontSize="35"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Последний вход:" FontSize="35"/>
+                <Label Content="неизвестно" FontSize="35"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="9" Grid.Row="1" Grid.ColumnSpan="3" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Статей написано:" FontSize="35"/>
+                <Label Content="0" FontSize="35"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Книг прочитано:" FontSize="35"/>
+                <Label Content="0" FontSize="35"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="9" Grid.Row="2" Grid.ColumnSpan="3" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Друзей:" FontSize="35"/>
+                <Label Content="0" FontSize="35"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Пол:" FontSize="35"/>
+                <Label Content="неизвестно" FontSize="35"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="6" VerticalAlignment="Bottom">
+            <Label Content="любимые жанры книг:" FontSize="35"/>
+            <Label Content="gegegegeg, gegegeg" FontSize="35"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="7" Grid.Row="3" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Width="Auto">
+            <Label Content="любимые книги:" FontSize="35"/>
+            <Label Content="gegegegeg, gegegeg" FontSize="35"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="11" VerticalAlignment="Top" Width="Auto">
+            <Label Content="О себе:" FontSize="35"/>
+            <TextBox  AcceptsReturn="True" IsReadOnly="True" Text="Неизвестно" TextWrapping="Wrap" Height="200" FontSize="35"/>
+        </StackPanel>
     </Grid>
 </Page>

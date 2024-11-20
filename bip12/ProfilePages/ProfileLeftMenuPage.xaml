@@ -9,10 +9,10 @@
       Title="ProfileLeftMenuPage">
 
     <StackPanel>
-        <Button x:Name="AboutMeButton" Height="110" Width="300" Content="О СЕБЕ" FontSize="30" Click="AboutMeButton_Click"/>
-        <Button x:Name="MyBooksButton" Height="110" Width="300" Content="МОИ КНИГИ" FontSize="30" Click="MyBooksButton_Click"/>
-        <Button x:Name="ReadingDiaryButton" Height="110" Width="300" Content="ДНЕВНИК ЧТЕНИЯ" FontSize="30" Click="ReadingDiaryButton_Click"/>
-        <Button Height="110" Width="300" Content="ДНЕВНИК ЧТЕНИЯ" FontSize="30"/>
+        <Button x:Name="AboutMeButton" Height="110" Width="300" Content="О себе" FontSize="30" Click="AboutMeButton_Click"/>
+        <Button x:Name="MyBooksButton" Height="110" Width="300" Content="Мои книги" FontSize="30" Click="MyBooksButton_Click"/>
+        <Button x:Name="ReadingDiaryButton" Height="110" Width="300" Content="Дневник чтения" FontSize="30" Click="ReadingDiaryButton_Click"/>
+        <Button Height="110" Width="300" Content="Друзья" FontSize="30"/>
         <Button Height="110" Width="300" Content="ДНЕВНИК ЧТЕНИЯ" FontSize="30"/>
         <Button Height="110" Width="300" Content="ДНЕВНИК ЧТЕНИЯ" FontSize="30"/>
         <Button Height="110" Width="300" Content="ДНЕВНИК ЧТЕНИЯ" FontSize="30"/>
